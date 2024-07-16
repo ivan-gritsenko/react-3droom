@@ -1,0 +1,47 @@
+.popup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 592px;
+  height: 614px;
+  padding: 1rem;
+  gap: 20px;
+  left: 4%;
+  top: 24%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.column {
+  width: 50%;
+}
+
+.inputs_area {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 32px;
+}
+
+.shops_sort {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.shop {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  gap: 10px;
+}

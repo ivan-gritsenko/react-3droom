@@ -1,0 +1,22 @@
+.color-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.color-box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid gray;
+  cursor: pointer;
+  transition: border 0.2s ease;
+  border-radius: 4px;
+}
+
+.color-box:hover {
+  border-color: #000;
+}
+
+.color-box.selected {
+  border-color: #000;
+}

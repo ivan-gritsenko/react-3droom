@@ -1,0 +1,19 @@
+.settings {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 120px;
+  left: 4%;
+  top: 16%;
+}
+
+.icon {
+  cursor: pointer;
+  transition: transform 0.2s;
+  user-select: none;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
