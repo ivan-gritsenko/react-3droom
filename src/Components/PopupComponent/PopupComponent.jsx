@@ -30,6 +30,7 @@ import Checkbox from "@mui/material/Checkbox";
 import { sizes } from "../../../public/data/sizes";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import { tiles_img } from "../../../public/data/tiles_img";
 
 function handleClick(event) {
   event.preventDefault();
@@ -216,7 +217,7 @@ const PopupComponent = () => {
                     <Grid item xs={4} key={item[0]}>
                       <div style={{ display: "flex", flexDirection: "column" }}>
                         <img
-                          src={`../../src/assets/images/${item[0]}.png`}
+                          src={tiles_img[item[0]]}
                           alt=""
                           style={{ width: "76px", height: "76px" }}
                         />
