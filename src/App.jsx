@@ -17,6 +17,12 @@ import {
 import Room from "../public/Room";
 import { useState } from "react";
 import SettingsComponent from "./Components/SettingsComponent/SettingsComponent";
+import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
+import DrawIcon from "@mui/icons-material/Draw";
+import WbIridescentIcon from "@mui/icons-material/WbIridescent";
+import ShareIcon from "@mui/icons-material/Share";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import CloseIcon from "@mui/icons-material/Close";
 
 const cameraPositions = [
   [0, 20, 22],
@@ -56,17 +62,15 @@ function App() {
             </div>
             <div className="about_project icon">
               <h5>About Project</h5>
-              <img
-                src="../src/assets/icons/info.svg"
-                style={{ alignSelf: "center", height: "20px", width: "20px" }}
-              />
+              <ErrorOutlineIcon />
             </div>
           </div>
           <div className="part2">
-            <img src="../src/assets/icons/paint.svg" className="icon" />
             <div className="icon">
-              <img
-                src="../src/assets/icons/wb_iridescent.svg"
+              <DrawIcon />
+            </div>
+            <div className="icon">
+              <WbIridescentIcon
                 style={{ alignSelf: "center", height: "20px", width: "20px" }}
               />
               <p>Lighting</p>
@@ -83,15 +87,20 @@ function App() {
                 icon={faArrowRotateRight}
                 onClick={handleTurnRight}
               />
-              <img className="icon" src="../src/assets/icons/share.svg" />
+              <div className="icon">
+                <ShareIcon />
+              </div>
+
               <FontAwesomeIcon className="icon" icon={faCameraRetro} />
-              <img className="icon" src="../src/assets/icons/help.svg" />
+              <div className="icon">
+                <HelpOutlineIcon />
+              </div>
             </div>
-            <img
-              className="icon"
-              src="../src/assets/icons/close-icon.svg"
-              style={{ alignSelf: "center", height: "20px", width: "20px" }}
-            />
+            <div className="icon">
+              <CloseIcon
+                style={{ alignSelf: "center", height: "20px", width: "20px" }}
+              />
+            </div>
           </div>
         </div>
         <div className="container">

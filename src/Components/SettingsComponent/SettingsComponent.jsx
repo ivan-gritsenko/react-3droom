@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./SettingsComponent.css";
 import PopupComponent from "../PopupComponent/PopupComponent";
+import TonalityIcon from "@mui/icons-material/Tonality";
+import LightIcon from "@mui/icons-material/Light";
+import ChairIcon from "@mui/icons-material/Chair";
+import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
 
 const SettingsComponent = () => {
   const [popup, setPopup] = useState(false);
@@ -16,22 +20,22 @@ const SettingsComponent = () => {
           }}
           onClick={() => setPopup(!popup)}
         >
-          <img src="../src/assets/icons/textures.svg" alt="" />
+          <TonalityIcon sx={{ color: "white" }} />
           <p style={{ color: "white" }}>textures</p>
         </div>
 
         <div className="icon ">
-          <img src="../src/assets/icons/light.svg" alt="" />
+          <LightIcon />
           <p>lighting</p>
         </div>
 
         <div className="icon">
-          <img src="../src/assets/icons/furniture.svg" alt="" />
+          <ChairIcon />
           <p>furniture</p>
         </div>
 
         <div className="icon">
-          <img src="../src/assets/icons/building.svg" alt="" />
+          <MeetingRoomIcon />
           <p>building</p>
         </div>
       </div>
