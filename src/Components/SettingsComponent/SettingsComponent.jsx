@@ -7,7 +7,7 @@ import ChairIcon from "@mui/icons-material/Chair";
 import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
 
 const SettingsComponent = () => {
-  const [popup, setPopup] = useState(false);
+  const [isPopup, setIsPopup] = useState(false);
   return (
     <>
       <div className="settings">
@@ -18,7 +18,7 @@ const SettingsComponent = () => {
             border: "4px solid #49494C",
             borderRadius: "10px",
           }}
-          onClick={() => setPopup(!popup)}
+          onClick={() => setIsPopup(!isPopup)}
         >
           <TonalityIcon sx={{ color: "white" }} />
           <p style={{ color: "white" }}>textures</p>
@@ -39,7 +39,7 @@ const SettingsComponent = () => {
           <p>building</p>
         </div>
       </div>
-      {popup && <PopupComponent />}
+      {isPopup && <PopupComponent />}
     </>
   );
 };

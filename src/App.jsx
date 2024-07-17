@@ -23,6 +23,7 @@ import WbIridescentIcon from "@mui/icons-material/WbIridescent";
 import ShareIcon from "@mui/icons-material/Share";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import CloseIcon from "@mui/icons-material/Close";
+import useCameraPosition from "./helpers/hooks/useCameraPosition";
 
 const cameraPositions = [
   [0, 20, 22],
@@ -31,27 +32,13 @@ const cameraPositions = [
 ];
 
 function App() {
-  const [cameraPosition, setCameraPosition] = useState(cameraPositions[1]);
+  const initialPosition = cameraPositions[0];
 
-  const handleTurnLeft = () => {
-    if (cameraPosition === cameraPositions[0]) {
-      setCameraPosition(cameraPositions[2]);
-    } else if (cameraPosition === cameraPositions[1]) {
-      setCameraPosition(cameraPositions[0]);
-    } else {
-      setCameraPosition(cameraPositions[1]);
-    }
-  };
+  const { cameraPosition, handleTurnLeft, handleTurnRight } = useCameraPosition(
+    initialPosition,
+    cameraPositions
+  );
 
-  const handleTurnRight = () => {
-    if (cameraPosition === cameraPositions[0]) {
-      setCameraPosition(cameraPositions[1]);
-    } else if (cameraPosition === cameraPositions[1]) {
-      setCameraPosition(cameraPositions[2]);
-    } else {
-      setCameraPosition(cameraPositions[0]);
-    }
-  };
   return (
     <>
       <div className="App">
